@@ -2,8 +2,8 @@
 
 一个**零构建、零依赖**的双语单页主页：纯 HTML + CSS + JS，推送到 GitHub 即自动上线。
 
-- 中文版：根路径 `/`（`index.html`）
-- 英文版：`/en/`（`en/index.html`），导航栏有 **EN / 中文** 切换按钮，两页互相跳转
+- 英文版（默认）：根路径 `/`（`index.html`）
+- 中文版：`/zh/`（`zh/index.html`），导航栏有 **中文 / EN** 切换按钮，两页互相跳转
 
 内容已按 [github.com/niiang](https://github.com/niiang) 的公开资料填好：
 名字 HONG HUANG、华科计算机硕士身份、两个真实仓库（zotero-GPT-glm-coding / RL）、
@@ -14,8 +14,8 @@
 
 ```
 github-pages-site/
-├── index.html       # 中文页面
-├── en/index.html    # 英文页面
+├── index.html       # 英文页面（默认，根路径）
+├── zh/index.html    # 中文页面
 ├── style.css        # 共用样式（换主色只需改 2 个变量）
 ├── script.js        # 共用交互（打字机短语写在各页面 #typed 的 data-phrases 里）
 └── README.md        # 本指南
@@ -75,7 +75,7 @@ git push
 
 | 想改什么 | 去哪改 |
 |---|---|
-| 自我介绍 / 近况 / 项目描述 | `index.html`（中文）与 `en/index.html`（英文）对应区块，两边都要改 |
+| 自我介绍 / 近况 / 项目描述 | `index.html`（英文）与 `zh/index.html`（中文）对应区块，两边都要改 |
 | 打字机轮播短语 | 各页面 `#typed` 元素的 `data-phrases` 属性，用 `\|` 分隔 |
 | 语言切换按钮位置/样式 | 导航栏 `.nav-lang`，样式在 `style.css` |
 | 主色调（全站渐变、按钮、光斑） | `style.css` 顶部 `--accent` / `--accent-2` 两个变量 |
@@ -93,5 +93,6 @@ git push
 
 - **改了没生效？** 浏览器缓存所致，`Ctrl+F5` 强制刷新；或等 1~2 分钟部署完成。
 - **404？** 检查仓库名是否严格为 `niiang.github.io`、仓库是否为 Public。
-- **英文页 404？** 确认仓库里有 `en/index.html`（注意 `en` 是文件夹）。
+- **中文页 404？** 确认仓库里有 `zh/index.html`（注意 `zh` 是文件夹）。
+- **英文页 404？** 根路径 `index.html` 就是英文页。
 - **想加博客/更多页面？** 直接往仓库加 `blog.html` 等页面，访问 `niiang.github.io/blog.html`。
