@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>HONG HUANG · 个人主页</title>
+  <meta name="description" content="HONG HUANG（niiang）的个人主页 —— 华中科技大学计算机科学与技术硕士研究生，关注强化学习与 AI 应用开发。" />
+
+  <!-- 语言互链（SEO） -->
+  <link rel="alternate" hreflang="en" href="https://niiang.github.io/" />
+  <link rel="alternate" hreflang="zh-CN" href="https://niiang.github.io/zh/" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+
+  <!-- 防止主题闪烁：在样式表加载前根据系统偏好/上次选择应用主题 -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        var prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+        document.documentElement.dataset.theme = saved || (prefersLight ? 'light' : 'dark');
+      } catch (e) { /* ignore */ }
+    })();
+  </script>
+
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <!-- ============ 顶部导航 ============ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#top">niiang<span class="logo-dot">.</span>dev</a>
+
+      <nav class="site-nav" id="site-nav" aria-label="主导航">
+        <a href="#about">关于</a>
+        <a href="#skills">技能</a>
+        <a href="#projects">项目</a>
+        <a href="#contact">联系</a>
+        <a class="nav-lang" href="../" hreflang="en">EN</a>
+        <a class="nav-github" href="https://github.com/niiang" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="theme-toggle" aria-label="切换亮色/暗色主题" title="切换主题">
+          <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="icon-btn menu-btn" id="menu-toggle" aria-label="打开菜单" aria-expanded="false">
+          <svg class="icon icon-menu" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+          <svg class="icon icon-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ 首屏 Hero ============ -->
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <span class="blob b1"></span>
+        <span class="blob b2"></span>
+        <span class="blob b3"></span>
+      </div>
+
+      <div class="container hero-inner">
+        <!-- 头像直接引用 GitHub 的头像 CDN，你在 GitHub 换头像后这里自动同步 -->
+        <img class="hero-avatar reveal" src="https://avatars.githubusercontent.com/niiang" alt="HONG HUANG 的头像" width="112" height="112" />
+        <p class="hero-hello reveal">👋 你好，我是</p>
+
+        <h1 class="hero-name gradient-text reveal">HONG HUANG</h1>
+
+        <!-- 打字机短语写在 #typed 的 data-phrases 属性里，用 | 分隔 -->
+        <p class="hero-title reveal"><span id="typed" data-phrases="计算机科学硕士生|强化学习学习者|AI 工具开发者|开源爱好者"></span><span class="caret" aria-hidden="true"></span></p>
+
+        <p class="hero-bio reveal">
+          华中科技大学计算机科学与技术硕士研究生。关注强化学习与 AI 应用开发，
+          也喜欢动手打磨让科研和日常更顺手的工具。
+        </p>
+
+        <div class="hero-actions reveal">
+          <a class="btn btn-primary" href="#projects">浏览我的项目</a>
+          <a class="btn btn-ghost" href="https://github.com/niiang" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub 主页
+          </a>
+        </div>
+
+        <ul class="hero-stats reveal">
+          <li><strong>硕士在读</strong><span>华中科技大学 · 计算机</span></li>
+          <li><strong>2</strong><span>GitHub 开源项目</span></li>
+          <li><strong>∞</strong><span>学习热情</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ 关于我 ============ -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-eyebrow">About</p>
+          <h2 class="section-title">关于我</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              你好！我是 HONG HUANG（GitHub: <a href="https://github.com/niiang" target="_blank" rel="noopener" style="color:var(--accent)">@niiang</a>），
+              华中科技大学计算机科学与技术专业的硕士研究生。
+              目前主要钻研强化学习，同时热衷于把大语言模型接入日常工具链，
+              让 AI 真正为科研和生产力服务。
+            </p>
+            <p>
+              我相信「用得上才是好工具」——从为 Zotero-GPT 增加智谱 GLM Coding
+              支持，到持续打磨自己的强化学习代码库，我都偏好动手做出能被真正使用的东西。
+            </p>
+
+            <ul class="about-info">
+              <li>
+                <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                坐标：中国 · 武汉（华中科技大学）
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+                邮箱：137999923+niiang@users.noreply.github.com（GitHub 匿名转发）
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                正在学习：深度强化学习 &amp; LLM 应用开发
+              </li>
+            </ul>
+          </div>
+
+          <aside class="now-card reveal" aria-label="近况">
+            <p class="now-label">📍 现在</p>
+            <ul>
+              <li>🛠️ 维护 <strong>Zotero-GPT 智谱 GLM Coding</strong> 支持</li>
+              <li>📚 深入 <strong>强化学习</strong> 算法与实验</li>
+              <li>🎯 目标：做出一个被很多人使用的开源项目</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 技能 ============ -->
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-eyebrow">Skills</p>
+          <h2 class="section-title">技术栈</h2>
+        </div>
+
+        <!-- 技能标签：按分组增删 <li class="chip"> 即可，dot 颜色用 style 内联改 -->
+        <div class="skills">
+          <div class="skill-group reveal">
+            <h3>编程语言</h3>
+            <ul class="chips">
+              <li class="chip"><span class="dot" style="background:#3776ab"></span>Python</li>
+              <li class="chip"><span class="dot" style="background:#f7df1e"></span>JavaScript</li>
+            </ul>
+          </div>
+
+          <div class="skill-group reveal">
+            <h3>研究方向</h3>
+            <ul class="chips">
+              <li class="chip"><span class="dot" style="background:#f97316"></span>强化学习</li>
+              <li class="chip"><span class="dot" style="background:#8b5cf6"></span>深度学习</li>
+              <li class="chip"><span class="dot" style="background:#22d3ee"></span>LLM 应用</li>
+            </ul>
+          </div>
+
+          <div class="skill-group reveal">
+            <h3>开发实践</h3>
+            <ul class="chips">
+              <li class="chip"><span class="dot" style="background:#cc2936"></span>Zotero 插件开发</li>
+              <li class="chip"><span class="dot" style="background:#10b981"></span>AI 工具链</li>
+              <li class="chip"><span class="dot" style="background:#64748b"></span>科学计算</li>
+            </ul>
+          </div>
+
+          <div class="skill-group reveal">
+            <h3>工具 &amp; 平台</h3>
+            <ul class="chips">
+              <li class="chip"><span class="dot" style="background:#f05032"></span>Git</li>
+              <li class="chip"><span class="dot" style="background:#2496ed"></span>GitHub</li>
+              <li class="chip"><span class="dot" style="background:#fcc624"></span>Linux</li>
+              <li class="chip"><span class="dot" style="background:#0078d7"></span>VS Code</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 项目 ============ -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-eyebrow">Projects</p>
+          <h2 class="section-title">精选项目</h2>
+          <p class="section-desc">一些我觉得有意思、也拿得出手的东西 👇</p>
+        </div>
+
+        <!-- 项目卡片：整张 <article> 复制/删除即可 -->
+        <div class="projects-grid">
+          <article class="card project-card reveal">
+            <div class="project-top">
+              <h3 class="project-name">zotero-GPT-glm-coding</h3>
+              <span class="project-badge">Zotero 插件</span>
+            </div>
+            <p class="project-desc">
+              为 Zotero-GPT 插件新增智谱 GLM Coding 套餐支持，
+              让 GLM 系列模型无缝接入 Zotero 文献阅读与科研工作流。
+            </p>
+            <ul class="project-tags">
+              <li>Zotero</li><li>JavaScript</li><li>LLM</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/niiang/zotero-GPT-glm-coding" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>源码
+              </a>
+            </div>
+          </article>
+
+          <article class="card project-card reveal">
+            <div class="project-top">
+              <h3 class="project-name">RL</h3>
+              <span class="project-badge">强化学习</span>
+            </div>
+            <p class="project-desc">
+              强化学习算法的实现与实验代码库，覆盖经典算法的复现与持续学习，
+              用 Python 构建，欢迎 Star 与交流。
+            </p>
+            <ul class="project-tags">
+              <li>Python</li><li>Reinforcement Learning</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/niiang/RL" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>源码
+              </a>
+              <a href="https://github.com/niiang/RL/stargazers" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>求 Star
+              </a>
+            </div>
+          </article>
+
+          <article class="card project-card reveal">
+            <div class="project-top">
+              <h3 class="project-name">更多项目</h3>
+              <span class="project-badge">Stay Tuned</span>
+            </div>
+            <p class="project-desc">
+              更多想法正在路上 🚧 如果你对我的项目感兴趣，
+              欢迎来 GitHub 主页逛逛、提 Issue 或一起交流。
+            </p>
+            <ul class="project-tags">
+              <li>开源</li><li>欢迎交流</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/niiang" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>GitHub 主页
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 联系 ============ -->
+    <section class="section section-alt" id="contact">
+      <div class="container contact-inner reveal">
+        <p class="section-eyebrow">Contact</p>
+        <h2 class="section-title">保持联系</h2>
+        <p class="contact-desc">
+          无论是技术交流、项目合作，还是只想打个招呼，都欢迎写信给我 ✉️
+        </p>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="mailto:137999923+niiang@users.noreply.github.com" id="mail-btn">
+            <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+            发邮件给我（GitHub 匿名转发）
+          </a>
+          <button class="btn btn-ghost" id="copy-mail" data-mail="137999923+niiang@users.noreply.github.com">复制邮箱</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ 页脚 ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2025</span> HONG HUANG · 用 ❤️ 与 GitHub Pages 构建</p>
+      <a href="#top">回到顶部 ↑</a>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
