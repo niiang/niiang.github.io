@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>HONG HUANG · Personal Homepage</title>
+  <meta name="description" content="HONG HUANG (niiang) — Master's student in Computer Science and Technology at HUST, focused on reinforcement learning and AI application development." />
+
+  <!-- 语言互链（SEO） -->
+  <link rel="alternate" hreflang="zh-CN" href="https://niiang.github.io/" />
+  <link rel="alternate" hreflang="en" href="https://niiang.github.io/en/" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+
+  <!-- 防止主题闪烁：在样式表加载前根据系统偏好/上次选择应用主题 -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        var prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+        document.documentElement.dataset.theme = saved || (prefersLight ? 'light' : 'dark');
+      } catch (e) { /* ignore */ }
+    })();
+  </script>
+
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <!-- ============ Header ============ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#top">niiang<span class="logo-dot">.</span>dev</a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a class="nav-lang" href="../" hreflang="zh-CN">中文</a>
+        <a class="nav-github" href="https://github.com/niiang" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="theme-toggle" aria-label="Toggle light/dark theme" title="Toggle theme">
+          <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="icon-btn menu-btn" id="menu-toggle" aria-label="Open menu" aria-expanded="false">
+          <svg class="icon icon-menu" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+          <svg class="icon icon-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ Hero ============ -->
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <span class="blob b1"></span>
+        <span class="blob b2"></span>
+        <span class="blob b3"></span>
+      </div>
+
+      <div class="container hero-inner">
+        <img class="hero-avatar reveal" src="https://avatars.githubusercontent.com/niiang" alt="HONG HUANG's avatar" width="112" height="112" />
+        <p class="hero-hello reveal">👋 Hi, I'm</p>
+
+        <h1 class="hero-name gradient-text reveal">HONG HUANG</h1>
+
+        <p class="hero-title reveal"><span id="typed" data-phrases="CS Master's Student|Reinforcement Learning Explorer|AI Tooling Developer|Open Source Enthusiast"></span><span class="caret" aria-hidden="true"></span></p>
+
+        <p class="hero-bio reveal">
+          Master's student in Computer Science and Technology at Huazhong University of
+          Science and Technology (HUST). I focus on reinforcement learning and AI application
+          development — and I love building tools that make research and daily work smoother.
+        </p>
+
+        <div class="hero-actions reveal">
+          <a class="btn btn-primary" href="#projects">Browse My Projects</a>
+          <a class="btn btn-ghost" href="https://github.com/niiang" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub Profile
+          </a>
+        </div>
+
+        <ul class="hero-stats reveal">
+          <li><strong>Master's</strong><span>HUST · Computer Science</span></li>
+          <li><strong>2</strong><span>GitHub Open Source Projects</span></li>
+          <li><strong>∞</strong><span>Passion for Learning</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ About ============ -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-eyebrow">About</p>
+          <h2 class="section-title">About Me</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              Hi! I'm HONG HUANG (GitHub: <a href="https://github.com/niiang" target="_blank" rel="noopener" style="color:var(--accent)">@niiang</a>),
+              a master's student in Computer Science and Technology at Huazhong University of
+              Science and Technology. My current focus is reinforcement learning, and I'm also
+              keen on bringing large language models into everyday toolchains, so that AI
+              genuinely serves research and productivity.
+            </p>
+            <p>
+              I believe "a tool is only good if it gets used" — from adding Zhipu GLM Coding
+              support to Zotero-GPT, to continuously polishing my own reinforcement learning
+              codebase, I prefer building things that people actually use.
+            </p>
+
+            <ul class="about-info">
+              <li>
+                <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Location: Wuhan, China (HUST)
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+                Email: 137999923+niiang@users.noreply.github.com (GitHub relay)
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                Currently learning: Deep RL &amp; LLM application development
+              </li>
+            </ul>
+          </div>
+
+          <aside class="now-card reveal" aria-label="Now">
+            <p class="now-label">📍 Now</p>
+            <ul>
+              <li>🛠️ Maintaining <strong>Zotero-GPT GLM Coding</strong> support</li>
+              <li>📚 Diving deep into <strong>reinforcement learning</strong></li>
+              <li>🎯 Goal: build an open source project that many people use</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Skills ============ -->
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-eyebrow">Skills</p>
+          <h2 class="section-title">Tech Stack</h2>
+        </div>
+
+        <div class="skills">
+          <div class="skill-group reveal">
+            <h3>Programming Languages</h3>
+            <ul class="chips">
+              <li class="chip"><span class="dot" style="background:#3776ab"></span>Python</li>
+              <li class="chip"><span class="dot" style="background:#f7df1e"></span>JavaScript</li>
+            </ul>
+          </div>
+
+          <div class="skill-group reveal">
+            <h3>Research Interests</h3>
+            <ul class="chips">
+              <li class="chip"><span class="dot" style="background:#f97316"></span>Reinforcement Learning</li>
+              <li class="chip"><span class="dot" style="background:#8b5cf6"></span>Deep Learning</li>
+              <li class="chip"><span class="dot" style="background:#22d3ee"></span>LLM Applications</li>
+            </ul>
+          </div>
+
+          <div class="skill-group reveal">
+            <h3>Development Practice</h3>
+            <ul class="chips">
+              <li class="chip"><span class="dot" style="background:#cc2936"></span>Zotero Plugin Development</li>
+              <li class="chip"><span class="dot" style="background:#10b981"></span>AI Toolchains</li>
+              <li class="chip"><span class="dot" style="background:#64748b"></span>Scientific Computing</li>
+            </ul>
+          </div>
+
+          <div class="skill-group reveal">
+            <h3>Tools &amp; Platforms</h3>
+            <ul class="chips">
+              <li class="chip"><span class="dot" style="background:#f05032"></span>Git</li>
+              <li class="chip"><span class="dot" style="background:#2496ed"></span>GitHub</li>
+              <li class="chip"><span class="dot" style="background:#fcc624"></span>Linux</li>
+              <li class="chip"><span class="dot" style="background:#0078d7"></span>VS Code</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Projects ============ -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-eyebrow">Projects</p>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-desc">A few things I find interesting and am proud of 👇</p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="card project-card reveal">
+            <div class="project-top">
+              <h3 class="project-name">zotero-GPT-glm-coding</h3>
+              <span class="project-badge">Zotero Plugin</span>
+            </div>
+            <p class="project-desc">
+              Adds Zhipu GLM Coding plan support to the Zotero-GPT plugin,
+              bringing GLM models seamlessly into Zotero's reading and research workflow.
+            </p>
+            <ul class="project-tags">
+              <li>Zotero</li><li>JavaScript</li><li>LLM</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/niiang/zotero-GPT-glm-coding" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>Source
+              </a>
+            </div>
+          </article>
+
+          <article class="card project-card reveal">
+            <div class="project-top">
+              <h3 class="project-name">RL</h3>
+              <span class="project-badge">Reinforcement Learning</span>
+            </div>
+            <p class="project-desc">
+              A codebase of reinforcement learning implementations and experiments —
+              classic algorithm reproductions and ongoing study, built with Python.
+              Stars and discussions welcome!
+            </p>
+            <ul class="project-tags">
+              <li>Python</li><li>Reinforcement Learning</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/niiang/RL" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>Source
+              </a>
+              <a href="https://github.com/niiang/RL/stargazers" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>Star it
+              </a>
+            </div>
+          </article>
+
+          <article class="card project-card reveal">
+            <div class="project-top">
+              <h3 class="project-name">More Projects</h3>
+              <span class="project-badge">Stay Tuned</span>
+            </div>
+            <p class="project-desc">
+              More ideas are on the way 🚧 If you're interested in my work,
+              feel free to visit my GitHub profile, open an issue, or just say hi.
+            </p>
+            <ul class="project-tags">
+              <li>Open Source</li><li>Welcome to Connect</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/niiang" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>GitHub Profile
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Contact ============ -->
+    <section class="section section-alt" id="contact">
+      <div class="container contact-inner reveal">
+        <p class="section-eyebrow">Contact</p>
+        <h2 class="section-title">Get in Touch</h2>
+        <p class="contact-desc">
+          Whether it's tech talk, project collaboration, or just saying hello — my inbox is always open ✉️
+        </p>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="mailto:137999923+niiang@users.noreply.github.com" id="mail-btn">
+            <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+            Email Me (GitHub relay)
+          </a>
+          <button class="btn btn-ghost" id="copy-mail" data-mail="137999923+niiang@users.noreply.github.com" data-ok="✅ Copied" data-fail="❌ Failed">Copy Email</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ Footer ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2025</span> HONG HUANG · Built with ❤️ and GitHub Pages</p>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
